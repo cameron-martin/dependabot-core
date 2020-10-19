@@ -79,6 +79,8 @@ module Dependabot
             # Set the stubbed replace directives
             update_go_mod(dependencies)
 
+            update_import_paths(dependencies)
+
             # Then run `go get` to pick up other changes to the file caused by
             # the upgrade
             run_go_get
@@ -133,9 +135,14 @@ module Dependabot
 
         def update_go_mod(dependencies)
           deps = dependencies.map do |dep|
+            previous = if dep.previous_version
+                         "v" + dep.previous_version&.sub(/^v/i, "")
+                       end
+
             {
               name: dep.name,
               version: "v" + dep.version.sub(/^v/i, ""),
+              previous_version: previous,
               indirect: dep.requirements.empty?
             }
           end
@@ -148,6 +155,29 @@ module Dependabot
           )
 
           write_go_mod(body)
+        end
+
+        def update_import_paths(dependencies)
+          # TODO: remove this duplication
+          deps = dependencies.map do |dep|
+            previous = if dep.previous_version
+                         "v" + dep.previous_version&.sub(/^v/i, "")
+                       end
+
+            {
+              name: dep.name,
+              version: "v" + dep.version.sub(/^v/i, ""),
+              previous_version: previous,
+              indirect: dep.requirements.empty?
+            }
+          end
+
+          SharedHelpers.run_helper_subprocess(
+            command: NativeHelpers.helper_path,
+            env: ENVIRONMENT,
+            function: "updateImportPaths",
+            args: { dependencies: deps }
+          )
         end
 
         def run_go_get
