@@ -240,7 +240,7 @@ module Dependabot
         end
 
         def source_provider_supports_html?
-          !%w(azure codecommit).include?(source.provider)
+          !%w(azure codecommit bitbucket_server).include?(source.provider)
         end
 
         def sanitize_links_and_mentions(text, unsafe: false)
