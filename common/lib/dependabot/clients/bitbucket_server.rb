@@ -203,11 +203,13 @@ module Dependabot
       end
 
       def put_multipart(url, body)
-        conn.put do |req|
+        res = conn.put do |req|
           req.url url
           req.body = body
           req.headers["Content-Type"] = "multipart/form-data"
         end
+
+        handle_response(res)
       end
 
       def conn
