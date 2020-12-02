@@ -543,10 +543,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@npmcli/arborist@^1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-1.0.10.tgz#2ea43fecc21bb4e5be1026a6a90b03077a347ee7"
-  integrity sha512-k5HwMlztD7clml2PJJLMS01QWUolzw6MXOyibhipmTHtKjsh5d2WtQNvPMxNYWLyACpJu9xIfK2OGaJpuNwbjA==
+"@npmcli/arborist@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-1.0.14.tgz#d813feb114edf36cf7ac9c9febd289413e6f042d"
+  integrity sha512-caa8hv5rW9VpQKk6tyNRvSaVDySVjo9GkI7Wj/wcsFyxPm3tYrEsFyTjSnJH8HCIfEGVQNjqqKXaXLFVp7UBag==
   dependencies:
     "@npmcli/installed-package-contents" "^1.0.5"
     "@npmcli/map-workspaces" "^1.0.1"
@@ -554,7 +554,7 @@
     "@npmcli/move-file" "^1.0.1"
     "@npmcli/name-from-folder" "^1.0.1"
     "@npmcli/node-gyp" "^1.0.0"
-    "@npmcli/run-script" "^1.7.2"
+    "@npmcli/run-script" "^1.8.0"
     bin-links "^2.2.1"
     cacache "^15.0.3"
     common-ancestor-path "^1.0.1"
@@ -647,15 +647,16 @@
   dependencies:
     infer-owner "^1.0.4"
 
-"@npmcli/run-script@^1.3.0", "@npmcli/run-script@^1.7.2":
-  version "1.7.5"
-  resolved "https://registry.yarnpkg.com/@npmcli/run-script/-/run-script-1.7.5.tgz#b9b286d88feb059d581ca08329f67a5ae08d9485"
-  integrity sha512-G8taZCc0HExiLadB3Nv0/h1TWjQ9HhkqW/waaH9MNqMX26rPRyNORst1LlNXOO8QnxQF4tNdJfc/Z3TuEtiyww==
+"@npmcli/run-script@^1.3.0", "@npmcli/run-script@^1.8.0":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@npmcli/run-script/-/run-script-1.8.1.tgz#729c5ac7293f250b654504d263952703af6da39c"
+  integrity sha512-G8c86g9cQHyRINosIcpovzv0BkXQc3urhL1ORf3KTe4TS4UBsg2O4Z2feca/W3pfzdHEJzc83ETBW4aKbb3SaA==
   dependencies:
     "@npmcli/node-gyp" "^1.0.0"
     "@npmcli/promise-spawn" "^1.3.0"
     infer-owner "^1.0.4"
     node-gyp "^7.1.0"
+    puka "^1.0.1"
     read-package-json-fast "^1.1.3"
 
 "@sinonjs/commons@^1.7.0":
@@ -5925,7 +5926,7 @@ psl@^1.1.28:
   resolved "https://registry.npmjs.org/psl/-/psl-1.8.0.tgz#9326f8bcfb013adcc005fdff056acce020e51c24"
   integrity sha512-RIdOzyoavK+hA18OGGWDqUTsCLhtA7IcZ/6NCs4fFJaHBDab+pDDmDIByWFRQJq2Cd7r1OoQxBGKOaztq+hjIQ==
 
-puka@^1.0.0:
+puka@^1.0.0, puka@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/puka/-/puka-1.0.1.tgz#a2df782b7eb4cf9564e4c93a5da422de0dfacc02"
   integrity sha512-ssjRZxBd7BT3dte1RR3VoeT2cT/ODH8x+h0rUF1rMqB0srHYf48stSDWfiYakTp5UBZMxroZhB2+ExLDHm7W3g==
